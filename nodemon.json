@@ -1,0 +1,6 @@
+{
+	"exec": "ts-node src/build.ts",
+	"ext": "scss",
+	"runOnChangeOnly": true,
+	"watch": ["src"]
+}

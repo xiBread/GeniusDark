@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true
+	},
+	"files": ["./src/build.ts"],
+	"exclude": ["node_modules", "src"]
+}

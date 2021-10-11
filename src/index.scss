@@ -1,0 +1,12 @@
+@import './global/index';
+
+@import './album/index';
+@import './home/index';
+@import './profile/index';
+@import './song/index';
+
+body {
+	@include scrollbar;
+
+	@apply text-zinc-100 bg-zinc-900;
+}

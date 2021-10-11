@@ -1,0 +1,101 @@
+@import './header';
+
+#featured-stories,
+#videos,
+// Latest
+.bBDcg {
+	@apply hidden;
+}
+
+// Charts
+#top-songs,
+// Community
+#community {
+	@apply bg-zinc-900;
+
+	// Section headers
+	.fEyCAH {
+		@apply text-zinc-100;
+	}
+
+	// Subheaders
+	.khEySD > h3 {
+		color: $color-accent;
+	}
+}
+
+// Charts
+#top-songs {
+	// Filter
+	.dqbVnf {
+		@apply bg-transparent border-none;
+
+		border-bottom: $style-border-separator;
+		// Hide overflow
+		line-height: inherit;
+
+		// Current filters text
+		.jmlkkm {
+			@apply text-zinc-100;
+		}
+
+		// Dropdown arrow
+		.cMZZs {
+			@include icon(chevron-down);
+		}
+	}
+
+	// Row item hover
+	.qsIlk:hover {
+		@apply bg-gray-700;
+	}
+
+	// Hide redundant "lyrics" label
+	.gSLxYm {
+		@apply hidden;
+	}
+
+	.dWDPoY {
+		// Concurrent views
+		.jfdPdw:first-child > .hliVmp {
+			// Icon
+			> div {
+				@include icon(flame, $color-accent);
+			}
+
+			// Text
+			> span {
+				@apply relative left-1.5;
+
+				color: $color-accent;
+				font-size: 0.9rem;
+			}
+		}
+
+		// Total views
+		.jfdPdw:nth-child(2) > .hliVmp {
+			// Icon
+			> div {
+				@include icon(eye);
+			}
+
+			// Text
+			> span {
+				@apply text-zinc-100 relative left-1.5;
+
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	// Load More
+	.eDwRUT > div {
+		@apply text-zinc-100 border-none hover:bg-transparent;
+
+		border-bottom: $style-border-separator;
+
+		&:hover {
+			color: $color-accent;
+		}
+	}
+}

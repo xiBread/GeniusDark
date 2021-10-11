@@ -1,0 +1,23 @@
+album-page div[ng-hide$='tracklist'] album-tracklist-row {
+	.chart_row {
+		// Remove random extended line & restyle tracklist items
+		@apply before:hidden bg-zinc-800 rounded-md border-none mb-3 py-3;
+
+		&-number_container {
+			@apply mr-0 ml-4;
+		}
+
+		&-content-title {
+			@apply text-zinc-100;
+
+			// Hide redundant "Lyrics" label
+			> span {
+				@apply hidden;
+			}
+		}
+
+		&-expand {
+			@include icon(chevron-down);
+		}
+	}
+}

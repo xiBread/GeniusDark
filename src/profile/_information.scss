@@ -1,0 +1,31 @@
+profile-page {
+	profile-user-pane {
+		> .white_container {
+			@apply bg-zinc-800 rounded-lg;
+		}
+
+		// Hide "Stats" label
+		> div:nth-child(2) {
+			@apply hidden;
+		}
+
+		statistics-panel > .statistics_panel {
+			@apply bg-zinc-800 rounded-lg;
+
+			.statistics_panel-item {
+				$stat-items: pencil 1, comment 2, file 3, question 4, check-circle 5, hash 6;
+
+				// Make each item equal width
+				flex-basis: 0;
+
+				@each $name, $i in $stat-items {
+					&:nth-child(#{$i}) .statistic_and_label-primary {
+						@include icon($name) {
+							top: 1px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

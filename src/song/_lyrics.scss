@@ -1,0 +1,75 @@
+.song_body {
+	@apply bg-zinc-800;
+
+	// Hide new song page preview button
+	.react_song_page_preview_link {
+		@apply hidden;
+	}
+
+	.lyrics_controls {
+		@apply bg-none relative;
+
+		// TODO: Restyle buttons
+		.square_button {
+			color: $color-gray-100;
+			border: 0.15rem solid $color-gray-100;
+			border-radius: 4px;
+		}
+	}
+
+	.lyrics {
+		// Annotations
+		.referent {
+			// TODO: Redesign annotation highlights
+			// Wanted to do some fancy animations here but lines can be partially
+			// annotated which causes weird behavior
+			// Can't do text variants because of markdown but I could do colors.
+			// Might be obnoxious though.
+			background: $color-gray-600;
+			box-shadow: none;
+		}
+	}
+
+	// Correct line button that appears after selecting text
+	.lyrics-correct_line-button {
+		@include icon(pencil);
+		@apply bg-zinc-600 rounded mr-1;
+	}
+
+	// div[ng-show$='showing()'].ng-hide {
+	// 	display: block !important;
+	// }
+
+	// "Start the Genius Annotation" box
+	.annotation_sidebar_unit:nth-child(2) {
+		@apply p-0 absolute w-0 h-0;
+
+		left: -165%;
+
+		add-annotation {
+			// Hide IQ text
+			.square_item_and_iq {
+				@apply invisible;
+			}
+
+			.square_button {
+				$height: 32px;
+
+				@include icon(comment, $psuedo: after);
+				@apply invisible p-0 before:visible before:bg-gray-600 rounded absolute h-8 w-8 after:visible;
+
+				height: $height + 5px;
+				width: $height + 10px;
+
+				&::after {
+					margin-right: 0.3em;
+				}
+			}
+		}
+	}
+}
+
+// Hide Apple Music player
+body[ng-app='genius.apple_music_player'] {
+	@apply hidden;
+}

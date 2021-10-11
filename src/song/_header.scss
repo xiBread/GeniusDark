@@ -1,0 +1,72 @@
+.header_with_cover_art {
+	// Remove gradient
+	@apply before:hidden;
+
+	// Blur header image
+	@apply after:top-0 after:absolute after:h-full after:w-full;
+
+	&::after {
+		// Dim the image
+		background: rgba($color-gray-900, 0.65);
+		backdrop-filter: blur(16px);
+	}
+
+	&-inner {
+		@apply px-0 py-6;
+
+		// Remove transparent overlay
+		background: none;
+		// Hide Pyong button
+		pyong-button {
+			@apply hidden;
+		}
+	}
+
+	&-cover_art {
+		@apply ml-0;
+
+		.cover_art {
+			@apply bg-none outline-[none];
+
+			&-image {
+				@apply rounded-lg;
+			}
+		}
+	}
+
+	&-metadata_preview {
+		// Move stats down
+		@apply -bottom-4;
+
+		&-unit {
+			&:not(:first-child) {
+				margin-left: 1.2rem;
+			}
+
+			// Currently viewing #
+			&:first-child {
+				@include icon(clock);
+			}
+
+			// # of Views
+			&:nth-child(2) {
+				@include icon(eye);
+			}
+
+			// # of Contributors
+			&:last-child {
+				@include icon(people);
+
+				.text_label {
+					@apply border-none;
+				}
+			}
+
+			.text_label {
+				@apply ml-0.5 text-zinc-100;
+
+				font-size: 14px;
+			}
+		}
+	}
+}

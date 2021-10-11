@@ -1,0 +1,11 @@
+profile-page {
+	scrollable-data > div {
+		> .u-display_block > .text_label {
+			@include icon(calendar, #e4e4e7); // zinc.200
+		}
+
+		profile-contributions-transcriptions > .profile_contribution {
+			@apply bg-zinc-800 rounded-md text-zinc-100;
+		}
+	}
+}

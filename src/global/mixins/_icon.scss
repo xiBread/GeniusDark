@@ -1,0 +1,28 @@
+@mixin icon(
+	$name,
+	$color: $color-gray-100,
+	$size: 16px,
+	$scale: 1.2,
+	$psuedo: before,
+	$hover: $color-gray-100
+) {
+	svg {
+		@apply hidden;
+	}
+
+	&::#{$psuedo} {
+		@apply inline-block relative -top-px bg-no-repeat;
+
+		content: '';
+		height: $size;
+		width: $size;
+		transform: scale($scale);
+		background: url($name + ' fill="#{$color}"');
+
+		@content;
+	}
+
+	&:hover::#{$psuedo} {
+		background: url($name + ' fill="#{$hover}"') no-repeat;
+	}
+}

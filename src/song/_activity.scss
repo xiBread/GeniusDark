@@ -1,0 +1,70 @@
+.modal_window {
+	@include scrollbar;
+}
+
+.modal_window-content {
+	@apply rounded-lg bg-zinc-800 max-w-[45%];
+
+	song-activity {
+		$items: transcribers bottom 0, iq_earners top 1.5rem;
+
+		@each $type, $side, $length in $items {
+			div[ng-if$='#{$type}'] {
+				margin-#{$side}: $length;
+			}
+		}
+
+		// Leaderboards
+		leaderboard {
+			// Hide percentage background for transcribers
+			&[collection$='transcribers'] .leaderboard-percentage_fill {
+				@apply hidden;
+			}
+
+			.leaderboard-row {
+				@apply h-12;
+
+				border-bottom: $style-border-dark;
+
+				// Limit to only 5 users
+				&:nth-child(n + 6) {
+					@apply hidden;
+				}
+
+				.leaderboard-rank {
+					@apply w-6;
+				}
+
+				.leaderboard-user {
+					@apply p-0;
+
+					.user_avatar {
+						@apply w-8 h-8;
+					}
+				}
+			}
+		}
+
+		// Hide "Load more" button
+		.leaderboard-load_more {
+			@apply hidden;
+		}
+
+		// Activity items
+		&-stream .feed_dropdown-item {
+			@apply my-4 rounded-md bg-zinc-700;
+
+			border-top: none;
+		}
+	}
+}
+
+// Fix close button position
+.modal_window-close_button {
+	@include icon(x, $scale: 2);
+
+	top: 2.2rem;
+	right: 36.4rem;
+	height: 1.3rem;
+	width: 1.3rem;
+}
