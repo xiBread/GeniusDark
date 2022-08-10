@@ -1,4 +1,4 @@
-@import './header';
+@import "./header";
 
 #featured-stories,
 #videos,
@@ -28,7 +28,7 @@
 #top-songs {
 	// Filter
 	.dqbVnf {
-		@apply bg-transparent border-none;
+		@apply border-none bg-transparent;
 
 		border-bottom: $style-border-separator;
 		// Hide overflow
@@ -81,7 +81,7 @@
 
 			// Text
 			> span {
-				@apply text-zinc-100 relative left-1.5;
+				@apply relative left-1.5 text-zinc-100;
 
 				font-size: 0.9rem;
 			}
@@ -90,7 +90,7 @@
 
 	// Load More
 	.eDwRUT > div {
-		@apply text-zinc-100 border-none hover:bg-transparent;
+		@apply border-none text-zinc-100 hover:bg-transparent;
 
 		border-bottom: $style-border-separator;
 

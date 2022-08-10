@@ -1,6 +1,8 @@
 {
-	"exec": "ts-node src/build.ts",
+	"exec": "node --experimental-specifier-resolution=node scripts/build.mjs",
 	"ext": "scss",
 	"runOnChangeOnly": true,
-	"watch": ["src"]
+	"watch": [
+		"src"
+	]
 }

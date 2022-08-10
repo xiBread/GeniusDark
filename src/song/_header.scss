@@ -3,7 +3,7 @@
 	@apply before:hidden;
 
 	// Blur header image
-	@apply after:top-0 after:absolute after:h-full after:w-full;
+	@apply after:absolute after:top-0 after:h-full after:w-full;
 
 	&::after {
 		// Dim the image
@@ -26,7 +26,7 @@
 		@apply ml-0;
 
 		.cover_art {
-			@apply bg-none outline-[none];
+			@apply outline-[none] bg-none;
 
 			&-image {
 				@apply rounded-lg;

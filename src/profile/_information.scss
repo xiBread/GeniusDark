@@ -1,7 +1,7 @@
 profile-page {
 	profile-user-pane {
 		> .white_container {
-			@apply bg-zinc-800 rounded-lg;
+			@apply rounded-lg bg-zinc-800;
 		}
 
 		// Hide "Stats" label
@@ -10,7 +10,7 @@ profile-page {
 		}
 
 		statistics-panel > .statistics_panel {
-			@apply bg-zinc-800 rounded-lg;
+			@apply rounded-lg bg-zinc-800;
 
 			.statistics_panel-item {
 				$stat-items: pencil 1, comment 2, file 3, question 4, check-circle 5, hash 6;

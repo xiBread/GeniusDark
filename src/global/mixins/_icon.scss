@@ -11,9 +11,9 @@
 	}
 
 	&::#{$psuedo} {
-		@apply inline-block relative -top-px bg-no-repeat;
+		@apply relative -top-px inline-block bg-no-repeat;
 
-		content: '';
+		content: "";
 		height: $size;
 		width: $size;
 		transform: scale($scale);

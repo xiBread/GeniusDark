@@ -3,13 +3,13 @@
 }
 
 .modal_window-content {
-	@apply rounded-lg bg-zinc-800 max-w-[45%];
+	@apply max-w-[45%] rounded-lg bg-zinc-800;
 
 	song-activity {
 		$items: transcribers bottom 0, iq_earners top 1.5rem;
 
 		@each $type, $side, $length in $items {
-			div[ng-if$='#{$type}'] {
+			div[ng-if$="#{$type}"] {
 				margin-#{$side}: $length;
 			}
 		}
@@ -17,7 +17,7 @@
 		// Leaderboards
 		leaderboard {
 			// Hide percentage background for transcribers
-			&[collection$='transcribers'] .leaderboard-percentage_fill {
+			&[collection$="transcribers"] .leaderboard-percentage_fill {
 				@apply hidden;
 			}
 
@@ -39,7 +39,7 @@
 					@apply p-0;
 
 					.user_avatar {
-						@apply w-8 h-8;
+						@apply h-8 w-8;
 					}
 				}
 			}

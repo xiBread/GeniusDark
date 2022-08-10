@@ -7,7 +7,7 @@
 	}
 
 	.lyrics_controls {
-		@apply bg-none relative;
+		@apply relative bg-none;
 
 		// TODO: Restyle buttons
 		.square_button {
@@ -33,7 +33,7 @@
 	// Correct line button that appears after selecting text
 	.lyrics-correct_line-button {
 		@include icon(pencil);
-		@apply bg-zinc-600 rounded mr-1;
+		@apply mr-1 rounded bg-zinc-600;
 	}
 
 	// div[ng-show$='showing()'].ng-hide {
@@ -42,7 +42,7 @@
 
 	// "Start the Genius Annotation" box
 	.annotation_sidebar_unit:nth-child(2) {
-		@apply p-0 absolute w-0 h-0;
+		@apply absolute h-0 w-0 p-0;
 
 		left: -165%;
 
@@ -56,7 +56,7 @@
 				$height: 32px;
 
 				@include icon(comment, $psuedo: after);
-				@apply invisible p-0 before:visible before:bg-gray-600 rounded absolute h-8 w-8 after:visible;
+				@apply invisible absolute h-8 w-8 rounded p-0 before:visible before:bg-gray-600 after:visible;
 
 				height: $height + 5px;
 				width: $height + 10px;
@@ -70,6 +70,6 @@
 }
 
 // Hide Apple Music player
-body[ng-app='genius.apple_music_player'] {
+body[ng-app="genius.apple_music_player"] {
 	@apply hidden;
 }

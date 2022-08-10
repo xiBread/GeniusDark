@@ -7,7 +7,7 @@
 
 		// Logo
 		.jNXEyt > svg {
-			fill: theme('colors.zinc.100');
+			fill: theme("colors.zinc.100");
 		}
 
 		// Dropdowns
@@ -34,7 +34,7 @@
 
 			// Account
 			&:last-child > div > .iuSLgK {
-				@apply bg-zinc-700 shadow-none rounded-md w-48;
+				@apply w-48 rounded-md bg-zinc-700 shadow-none;
 
 				// Hide redundant "Account" label
 				> .dpzskF,
@@ -44,7 +44,7 @@
 				}
 
 				> .eJJKMv {
-					@apply text-zinc-100 select-none;
+					@apply select-none text-zinc-100;
 				}
 
 				@mixin rename($content) {
@@ -56,16 +56,16 @@
 				}
 
 				// Rename "View Profile"
-				> a[href*='genius.com'] {
-					@include rename('Profile');
+				> a[href*="genius.com"] {
+					@include rename("Profile");
 					// @include icon('person', black, 12px, 1, 0);
 
 					padding-bottom: 0.4rem;
 				}
 
 				// Rename "Report a Problem"
-				> a[href^='/feedback'] {
-					@include rename('Feedback');
+				> a[href^="/feedback"] {
+					@include rename("Feedback");
 				}
 
 				// "Sign Out"
@@ -86,11 +86,11 @@
 .standalone_inbox--embed {
 	@include scrollbar;
 
-	@apply shadow-none rounded-lg;
+	@apply rounded-lg shadow-none;
 }
 
 // Notifications
-inbox[inbox-name='main_activity_inbox'] {
+inbox[inbox-name="main_activity_inbox"] {
 	// Rename "Me"
 	> .feed_dropdown-header {
 		@apply bg-zinc-800 after:select-none after:content-['Notifications'];
@@ -102,7 +102,7 @@ inbox[inbox-name='main_activity_inbox'] {
 
 	inbox-line-item {
 		> .feed_dropdown-item {
-			@apply bg-zinc-800 hover:bg-zinc-700 border-t-[0.5px] border-t-zinc-600 border-solid;
+			@apply border-t-[0.5px] border-solid border-t-zinc-600 bg-zinc-800 hover:bg-zinc-700;
 		}
 
 		.inbox_line_item-action-center {

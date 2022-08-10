@@ -1,3 +1,10 @@
 module.exports = {
-	plugins: [require('@tailwindcss/typography')]
+	theme: {
+		extend: {
+			fontFamily: {
+				inter: ["Inter", "sans-serif"],
+			},
+		},
+	},
+	plugins: [require("@tailwindcss/typography")],
 };

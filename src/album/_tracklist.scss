@@ -1,7 +1,7 @@
-album-page div[ng-hide$='tracklist'] album-tracklist-row {
+album-page div[ng-hide$="tracklist"] album-tracklist-row {
 	.chart_row {
 		// Remove random extended line & restyle tracklist items
-		@apply before:hidden bg-zinc-800 rounded-md border-none mb-3 py-3;
+		@apply mb-3 rounded-md border-none bg-zinc-800 py-3 before:hidden;
 
 		&-number_container {
 			@apply mr-0 ml-4;

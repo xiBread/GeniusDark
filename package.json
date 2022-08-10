@@ -4,43 +4,37 @@
 	"description": "A modern dark mode theme for Genius",
 	"private": true,
 	"scripts": {
-		"start": "nodemon",
-		"lint": "stylelint src",
-		"lint:fix": "stylelint src --fix",
-		"style": "prettier src -w && npm run lint:fix",
+		"dev": "nodemon",
+		"style": "prettier src -w",
 		"build:dev": "sass --no-charset src/:dist/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/oleevermeren/Genius-Dark.git"
+		"url": "git+https://github.com/xiBread/Genius-Dark.git"
 	},
 	"keywords": [],
 	"author": "Oscar Lee-Vermeren <oscar.leevermeren@gmail.com>",
 	"license": "Apache-2.0",
 	"bugs": {
-		"url": "https://github.com/oleevermeren/Genius-Dark/issues"
+		"url": "https://github.com/xiBread/Genius-Dark/issues"
 	},
-	"homepage": "https://github.com/oleevermeren/Genius-Dark#readme",
+	"homepage": "https://github.com/xiBread/Genius-Dark#readme",
 	"devDependencies": {
-		"@primer/octicons": "^16.0.0",
-		"@tailwindcss/typography": "^0.5.0-alpha.2",
-		"@types/mustache": "^4.1.2",
-		"@types/node": "^16.10.3",
-		"@types/prettier": "^2.4.1",
-		"@types/primer__octicons": "^16.0.0",
-		"@types/sass": "^1.16.1",
-		"@types/tailwindcss": "^2.2.1",
-		"autoprefixer": "^10.3.7",
-		"cssnano": "^5.0.8",
-		"postcss": "^8.3.9",
-		"postcss-cli": "^9.0.1",
-		"prettier": "^2.4.1",
-		"sass": "^1.42.1",
-		"stylelint": "^13.13.1",
-		"stylelint-config-standard": "^22.0.0",
-		"stylelint-order": "^4.1.0",
-		"stylelint-scss": "^3.21.0",
-		"tailwindcss": "^3.0.0-alpha.1",
-		"ts-node": "^10.2.1"
+		"@tailwindcss/typography": "^0.5.4",
+		"@types/node": "^18.6.5",
+		"@types/prettier": "^2.7.0",
+		"@types/sass": "^1.43.1",
+		"autoprefixer": "^10.4.8",
+		"cssnano": "^5.1.12",
+		"postcss": "^8.4.16",
+		"postcss-cli": "^10.0.0",
+		"prettier": "^2.7.1",
+		"prettier-plugin-tailwindcss": "^0.1.13",
+		"sass": "^1.54.4",
+		"tailwindcss": "^3.1.8",
+		"ts-node": "^10.9.1"
+	},
+	"dependencies": {
+		"heroicons": "^1.0.6"
 	}
 }
